@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notre Équipe</title>
+    <title>Poisson Steeam</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Notre Équipe Extraordinaire</h1>
+      <h1>Le goat, l'unique POISSON STEVE</h1>
       <div class="team-image-container">
         <img src="images/team.jpg" alt="Photo d'équipe" class="team-image" />
       </div>
@@ -19,39 +19,49 @@
         <div class="card" data-member="1">
           <img src="images/member1.jpg" alt="Membre 1" />
           <h3>Léopold</h3>
-          <p>Développeuse Frontend</p>
         </div>
 
         <div class="card" data-member="2">
           <img src="images/member2.jpg" alt="Membre 2" />
           <h3>Cassandra</h3>
-          <p>Designer UX/UI</p>
         </div>
 
         <div class="card" data-member="3">
           <img src="images/member3.jpg" alt="Membre 3" />
           <h3>Mehdi</h3>
-          <p>Développeuse Backend</p>
         </div>
 
         <div class="card" data-member="4">
           <img src="images/member4.jpg" alt="Membre 4" />
           <h3>Kalim</h3>
-          <p>Chef de Projet</p>
         </div>
 
         <div class="card" data-member="5">
           <img src="images/member5.jpg" alt="Membre 5" />
           <h3>Hugo</h3>
-          <p>Marketing Digital</p>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2023 Notre Équipe Extraordinaire</p>
-    </footer>
+    <!-- Ajout d'un script inline temporaire pour déboguer -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM chargé, initialisation des événements...");
+        const cards = document.querySelectorAll(".card");
+        console.log("Nombre de cartes trouvées:", cards.length);
 
+        cards.forEach(function (card) {
+          card.addEventListener("click", function () {
+            const memberId = this.getAttribute("data-member");
+            console.log(
+              "Carte cliquée, redirection vers member" + memberId + ".html"
+            );
+            window.location.href = "member" + memberId + ".html";
+          });
+        });
+      });
+    </script>
+    <!-- Le script principal reste inclus au cas où -->
     <script src="main.js"></script>
   </body>
 </html>
