@@ -9,6 +9,8 @@
 body {
   background-color: #f9daa1;
   color: #333;
+  background-image: url('./img/le_poisson_steve.png');
+  background-repeat: repeat;
 }
 
 header {
